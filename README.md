@@ -1,1 +1,3 @@
-# openseadragon-curtain-sync
+# Curtain & Snyc Modes for OpenSeadragon
+
+An plugin for [OpenSeadragon](https://openseadragon.github.io/#) to add 2 new view modes that allow for viewing multiple images at the same time in a syncronized fashion. More info coming soon...
