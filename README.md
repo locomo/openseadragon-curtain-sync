@@ -59,12 +59,20 @@ $('#myButton').on('click', function(e){
 ```
 
 ## Methods
-Method|Description
--|-
-`getImageShown(key)`|Returns `true` or `false` for a given image key.
-`setImageShown(key, shown)`|Shows or hides an image key based on the `shown` arguement.
-`getMode(key)`|Returns the current viewer mode ("curtain" or "sync").
-`setMode(key)`|Sets the mode for the viewer (`key` = "curtain" or "sync"). If no key is provided, it will default to "sync" mode.
+The following new methods are now available on the viewer instance.
+
+Method|Args|Description
+-|-|-
+`getImageShown`|*key*|Returns `true` or `false` for a given image `key`.
+`setImageShown`|*key,*<br>*shown*|Shows or hides an image `key` based on the `shown` arguement.
+`getMode`|*none*|Returns the current viewer mode.
+`setMode`|*mode*|Sets the mode for the viewer (`mode` = "curtain" or "sync"). If no key is provided, it will default to "sync" mode.
+
+**Example:**
+```js
+var viewer = new CurtainSyncViewer(options);
+viewer.setMode('sync');
+```
 
 ## DZI Image Sources
 Each image in the demo and examples above use IIIF for the `TileSource` which makes things super easy. However, you can also choose to use any of the OpenSeadragon supported [DZI image formats](https://openseadragon.github.io/examples/creating-zooming-images/). An example would look like:
