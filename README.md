@@ -59,18 +59,53 @@ $('#myButton').on('click', function(e){
 ```
 
 ## Methods
-`getImageShown(key)`
+Method|Description
+-|-
+`getImageShown(key)`|Returns `true` or `false` for a given image key.
+`setImageShown(key, shown)`|Shows or hides an image key based on the `shown` arguement.
+`getMode(key)`|Returns the current viewer mode ("curtain" or "sync").
+`setMode(key)`|Sets the mode for the viewer (`key` = "curtain" or "sync"). If no key is provided, it will default to "sync" mode.
 
-Returns `true` or `false` for a given image key.
+## DZI Image Sources
+Each image in the demo and examples above use IIIF for the `TileSource` which makes things super easy. However, you can also choose to use any of the OpenSeadragon supported [DZI image formats](https://openseadragon.github.io/examples/creating-zooming-images/). An example would look like:
 
-`setImageShown(key, shown)`
-
-Shows or hides an image key based on the `shown` arguement.
-
-`getMode(key)`
-
-Returns the current viewer mode ("curtain" or "sync").
-
-`setMode(key)`
-
-Sets the mode for the viewer (`key` = "curtain" or "sync"). If no key is provided, it will default to "sync" mode.
+```js
+var viewer = new CurtainSyncViewer({
+  container: document.querySelector('#viewer'),
+  images: [
+    {
+      key: 'my-key-1',
+      tileSource: {
+        Image: {
+          xmlns: 'http://schemas.microsoft.com/deepzoom/2008',
+          Url: 'https://url-to-your-image-tiles-folder',
+          Format: 'jpg',
+          Overlap: '1',
+          TileSize: '128',
+          Size: {
+            Width:  '5183',
+            Height: '6539'
+          }
+        }
+      },
+      shown: true
+    },
+    {
+      key: 'my-key-2',
+      tileSource: {
+        Image: {
+          xmlns: 'http://schemas.microsoft.com/deepzoom/2008',
+          Url: 'https://url-to-your-image-tiles-folder',
+          Format: 'jpg',
+          Overlap: '1',
+          TileSize: '128',
+          Size: {
+            Width:  '5183',
+            Height: '6539'
+          }
+        }
+      },
+    }
+  ],
+});
+```
