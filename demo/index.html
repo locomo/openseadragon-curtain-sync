@@ -12,8 +12,8 @@
       <!-- Zoom controls -->
       <div>
         <span>Zoom</span>
-        <button class="btn zoom-tri" data-type="in" title="Zoom In">Zoom In</button>
-        <button class="btn zoom-tri" data-type="out" title="Zoom Out">Zoom Out</button>
+        <button class="btn zoom-trigger" data-type="in" title="Zoom In">Zoom In</button>
+        <button class="btn zoom-trigger" data-type="out" title="Zoom Out">Zoom Out</button>
       </div>
 
       <!-- Type controls -->
@@ -34,10 +34,11 @@
 
     <!-- Viewer Element -->
     <div id="viewer"></div>
+    <div class="copyright">&copy; All images copyright of The Leiden Collection, New York.</div>
 
     <!-- OpenSeadragon from CDN and Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/openseadragon@2.4/build/openseadragon/openseadragon.min.js"></script>
-    <script src="../src/openseadragon-curtain-sync.js"></script>
+    <script src="../src/openseadragon-curtain-sync.min.js"></script>
 
     <!-- Demo Specific Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

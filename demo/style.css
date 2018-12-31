@@ -43,3 +43,11 @@ nav span {
   background-color: darkslateblue;
   color: white;
 }
+
+.copyright {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+  font-size: 10px;
+}
