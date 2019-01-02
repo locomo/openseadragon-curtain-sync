@@ -9,7 +9,7 @@ This library is an extension for [OpenSeadragon](https://openseadragon.github.io
 ## Demo
 Demo coming soon!
 
-*All images copyright of The Leiden Collection, New York*
+*\*All images courtesy of The Leiden Collection*
 
 ## Install
 1. [Download and install OpenSeadragon](https://openseadragon.github.io/#download).
