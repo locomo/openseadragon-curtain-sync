@@ -7,7 +7,7 @@ This library is an extension for [OpenSeadragon](https://openseadragon.github.io
 **Sync mode** shows images side-by-side but keeps each image in sync as the user zooms or pans.
 
 ## Demo
-Demo coming soon!
+[View the demo here](https://cuberis.github.io/openseadragon-curtain-sync/demo/)
 
 *\*All images courtesy of The Leiden Collection*
 
