@@ -1,4 +1,4 @@
-# Curtain & Snyc Modes for OpenSeadragon
+# Curtain & Sync Modes for OpenSeadragon
 
 This library is an extension for [OpenSeadragon](https://openseadragon.github.io/#) that enables side-by-side, syncronized image viewing. This extension will add the "curtain" and "sync" view modes to any OpenSeadragon viewer.
 
