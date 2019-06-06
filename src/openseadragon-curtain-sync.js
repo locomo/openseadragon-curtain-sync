@@ -27,10 +27,9 @@
 
     OpenSeadragon.EventSource.call(this);
 
-    this.viewer = OpenSeadragon({
-      element: args.container,
-      showNavigationControl: false
-    });
+    var ops = args.osdOptions;
+    ops.element = args.container;
+    this.viewer = OpenSeadragon( ops );
 
     this.viewer.canvas.style.outline = 'none'; // so we don't see the browser's selection rectangle when we click
 
@@ -255,11 +254,10 @@
         image.sync.container.style.display = 'none';
       }
 
-      image.sync.viewer = OpenSeadragon({
-        element: image.sync.container,
-        showNavigationControl: false,
-        tileSources: image.tileSource
-      });
+      var ops = args.osdOptions;
+      ops.element = image.sync.container;
+      ops.tileSources = image.tileSource;
+      image.sync.viewer = OpenSeadragon( ops );
 
       image.sync.viewer.canvas.style.outline = 'none'; // so we don't see the browser's selection rectangle when we click
 
@@ -389,6 +387,8 @@
     this.viewportEventThrottle = args.viewportEventThrottle || 250;
     this.lastViewportEventTime = 0;
     this.images = [];
+    this.osdOptions = args.osdOptions || {};
+    this.osdOptions.showNavigationControl = false; // hardcode to override this option
 
     if (getComputedStyle(this.container).position === 'static') {
       this.container.style.position = 'relative';
@@ -436,7 +436,8 @@
         container: this.container,
         images: this.images,
         zoom: this.zoom,
-        pan: this.pan
+        pan: this.pan,
+        osdOptions: this.osdOptions
       };
 
       if (key === 'curtain') {
