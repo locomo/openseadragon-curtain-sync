@@ -16,7 +16,7 @@ This library is an extension for [OpenSeadragon](https://openseadragon.github.io
 2. Include `openseadragon-curtain-sync.min.js` on your page.
 
 ## Getting Started
-This library includes only the javascript for extending OpenSeadragon. It does not include any of the UI elements for interacting with the CurtainSyncViewer. You may use any of the [default configuration options](https://openseadragon.github.io/docs/OpenSeadragon.html#.Options), but must include the new `images` option which is specific to this plugin.
+This library includes only the javascript for extending OpenSeadragon. It does not include any of the UI elements for interacting with the CurtainSyncViewer. You may use any of the [default configuration options](https://openseadragon.github.io/docs/OpenSeadragon.html#.Options) passed in an object via the `osdOptions` argument, but must include the new `images` option which is specific to this plugin.
 
 **First**, initialize the viewer (note: this example uses IIIF for image tiling).
 
@@ -40,6 +40,11 @@ var viewer = new CurtainSyncViewer({
       tileSource: 'https://url-to-iiif-manifest.json',
     }
   ],
+
+  // OpenSeaDragon options
+  osdOptions: {
+    zoomPerClick: 2
+  },
 
 });
 ```
