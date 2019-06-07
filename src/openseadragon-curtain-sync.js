@@ -29,7 +29,7 @@
 
     var ops = args.osdOptions;
     ops.element = args.container;
-    this.viewer = OpenSeadragon( ops );
+    this.viewer = OpenSeadragon(ops);
 
     this.viewer.canvas.style.outline = 'none'; // so we don't see the browser's selection rectangle when we click
 
@@ -437,7 +437,7 @@
         images: this.images,
         zoom: this.zoom,
         pan: this.pan,
-        osdOptions: this.osdOptions
+        osdOptions: OpenSeadragon.extend({}, this.osdOptions)
       };
 
       if (key === 'curtain') {
